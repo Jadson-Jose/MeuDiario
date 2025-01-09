@@ -42,7 +42,11 @@
                                 <label for="email" class="block text-sm/6 font-medium text-gray-200 mt-2">Pessoas</label>
                                 <select multiple name="pessoas" id="pessoas" class="block w-full rounded-md bg-white px-3 py-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                                     
-                                    <option value="1">Pessoa 1</option>
+                                    {% for i in pessoas %}
+                                    
+                                        <option value="{{i.id}}">{{i.nome}}</option>
+
+                                    {% endfor %}
                                     
                                 </select>
                             </div>

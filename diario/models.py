@@ -10,7 +10,7 @@ class Pessoa(models.Model):
 
 
 class Diario(models.Model):
-    tiulo = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=100)
     tags = models.TextField()
     texto = models.TextField()
     pessoas = models.ManyToManyField(Pessoa, null=True, blank=True)
